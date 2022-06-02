@@ -5,15 +5,15 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--filepath", help="path to create file structure")
 args = parser.parse_args()
 
-current_dir = os.getcwd()
 
 # Creating File Structure for flask apps
 
 
-def create_file_structure(path=current_dir):
+def create_file_structure(path):
     """
     Creates Flask file structure in the current directory
     """
+    os.chdir(path)
     # creating dirs at root first
     dir_list = ['static/css', "static/js", 'templates']
     for files in dir_list:
@@ -37,5 +37,5 @@ if __name__ == "__main__":
             print("[!] invalid file path.")
     else:
         print("[+] creating file structure in current directory.")
-        create_file_structure()
+        create_file_structure("./")
         print("[*] file structure created.")
