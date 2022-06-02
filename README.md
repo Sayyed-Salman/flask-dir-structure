@@ -13,6 +13,7 @@ python scirpt.py --filepath "C:/User/Projects/Flask-Webisite"
 ```
 
 - use --filepath argument for specific path
+- read License before use
 
 ## Modules
 
